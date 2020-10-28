@@ -24,6 +24,7 @@ import matplotlib.pyplot as plt
 from  matplotlib import patches
 from matplotlib.figure import Figure
 from matplotlib import rcParams
+from scipy import signal
     
 def zplane(b,a,filename=None):
     """Plot the complex z-plane given a transfer function.
@@ -81,3 +82,20 @@ def zplane(b,a,filename=None):
     
 
     return z, p, k
+
+
+def freq_response(b, a):
+    w, h = signal.freqz(b, a, whole=True)
+    fig, ax1 = plt.subplots()
+
+    ax1.plot(w, abs(h), 'b')
+    ax1.set_ylabel('Amplitude [dB]', color='b')
+    ax1.set_xlabel('Frequency [rad/sample]')
+
+    ax2 = ax1.twinx()
+    angles = np.unwrap(np.angle(h))
+    ax2.plot(w, angles, 'g')
+    ax2.set_ylabel('Angle (radians)', color='g')
+    ax2.grid()
+    ax2.axis('tight')
+    plt.show()
