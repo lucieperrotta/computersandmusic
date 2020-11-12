@@ -1,4 +1,35 @@
-#
+import numpy as np
+import matplotlib.pyplot as plt
+from  matplotlib import patches
+from matplotlib.figure import Figure
+from matplotlib import rcParams
+from scipy import signal
+from scipy.signal import butter, sosfilt, sosfreqz
+
+
+# Butterworth filter
+def butter_pass(lowhighcut, fs, btype, order=5):
+        nyq = 0.5 * fs
+        lowhigh =  lowhighcut / nyq
+        sos = butter(order, lowhigh, analog=False, btype=btype, output='sos')
+        return sos
+
+def butter_pass_filter(data, lowhighcut, fs, btype, order=5):
+        sos = butter_pass(lowhighcut, fs, btype, order=order)
+        y = sosfilt(sos, data)
+        return y
+
+"""
+Oversampling utilities
+"""
+def oversample(x, oversampling_rate=8):
+    return signal.resample(x, x.size*oversampling_rate)
+
+def undersample(x, oversampling_rate=8):
+    down_x = butter_pass_filter(x, 1, oversampling_rate*2, "lowpass", order=10)
+    return signal.resample(down_x, int(x.size / oversampling_rate))
+
+
 # Copyright (c) 2011 Christopher Felton
 #
 # This program is free software: you can redistribute it and/or modify
@@ -18,13 +49,6 @@
 # The following is derived from the slides presented by
 # Alexander Kain for CS506/606 "Special Topics: Speech Signal Processing"
 # CSLU / OHSU, Spring Term 2011.
-
-import numpy as np
-import matplotlib.pyplot as plt
-from  matplotlib import patches
-from matplotlib.figure import Figure
-from matplotlib import rcParams
-from scipy import signal
     
 def zplane(b,a,filename=None):
     """Plot the complex z-plane given a transfer function.
