@@ -7,6 +7,16 @@ from scipy import signal
 from scipy.signal import butter, sosfilt, sosfreqz
 
 
+# Moving average
+def moving_average(X, N=10):
+    '''
+    Helper function to compute the smoothed sequence X using a moving average.
+    '''
+    augmented_X = np.concatenate((tuple([X[0] for i in range(int(N/2))]) , X , tuple([X[-1] for i in range(int(N/2)-1)])))
+    res = np.convolve(augmented_X, np.ones((N,))/N, mode='valid')
+    return res
+
+
 # Butterworth filter
 def butter_pass(lowhighcut, fs, btype, order=5):
         nyq = 0.5 * fs
