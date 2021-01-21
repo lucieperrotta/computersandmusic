@@ -1,0 +1,6 @@
+numpy
+scipy
+matplotlib
+ipywidgets
+IPython
+import_ipynb
