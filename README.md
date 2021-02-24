@@ -1,4 +1,4 @@
-# <i>COMXXX - Computers and Music</i>
+# <i>COM-418 - Computers and Music</i>
 
 <div align="right"><a href="https://people.epfl.ch/lucie.perrotta">Lucie Perrotta</a> and <a href="https://people.epfl.ch/paolo.prandoni">Paolo Prandoni</a>, <a href="https://www.epfl.ch/labs/lcav/">LCAV, EPFL</a></div>
 
@@ -12,6 +12,9 @@ This repository is part of the EPFL Master's course *Computers and Music* taught
 - **Equalizer**: An audio EQ composed of 3 types of frequency filters (notch, cut, and shelf).
 - **Compressor**: A dynamic range compressor controlled by threshold, ratio, knee with, makeup, attack, and release.
 - **NonlinearModelling**: Methods for modelling and identifying dynamic nonlinear systems such as amplifiers.
+- **DeepLearning**: Some examples of deep learning applications in production.
 - **Helpers**: A notebook with helpers functions for the others notebooks, along with examples and explanations.
 
 The *requirements.txt* file contains the libraries needed for running the code.
+
+The *samples* directory contains *wav* audio files needed for running the notebooks.
