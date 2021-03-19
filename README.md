@@ -7,14 +7,14 @@ This repository is part of the EPFL Master's course *Computers and Music* taught
 
 - **[Synthesizer](./Synthesizer.ipynb)**: Digital, additive, FM, and wavetable syntheses, and LFO modulation.
 - **[PitchScalingAndTimeStretching](./PitchScalingAndTimeStretching.ipynb)**: Methods for independently changing the pitch and length of an audio signal.
-- **ChannelVocoder**: A vocoder combining a carrier synthesizer with a modulator voice.
-- **Reverb**: Artificial acoustic reverberation built from FIR and IIR filters.
-- **Equalizer**: An audio EQ composed of 3 types of frequency filters (notch, cut, and shelf).
-- **Compressor**: A dynamic range compressor controlled by threshold, ratio, knee with, makeup, attack, and release.
-- **NonlinearModelling**: Methods for modelling and identifying dynamic nonlinear systems such as amplifiers.
-- **DeepLearning**: Some examples of deep learning applications in production.
-- **Helpers**: A notebook with helpers functions for the others notebooks, along with examples and explanations.
+- **[ChannelVocoder](.ChannelVocoder.ipynb)**: A vocoder combining a carrier synthesizer with a modulator voice.
+- **[Reverb](./Reverb.ipynb)**: Artificial acoustic reverberation built from FIR and IIR filters.
+- **[Equalizer](./Equalizer.ipynb)**: An audio EQ composed of 3 types of frequency filters (notch, cut, and shelf).
+- **[Compressor](./Compressor.ipynb)**: A dynamic range compressor controlled by threshold, ratio, knee with, makeup, attack, and release.
+- **[NonlinearModelling](./NonlinearModelling.ipynb)**: Methods for modelling and identifying dynamic nonlinear systems such as amplifiers.
+- **[DeepLearning](./DeepLearning.ipynb)**: Some examples of deep learning applications in production.
+- **[Helpers](./Helpers.ipynb)**: A notebook with helpers functions for the others notebooks, along with examples and explanations.
 
 The *requirements.txt* file contains the libraries needed for running the code.
 
-The *samples* directory contains *wav* audio files needed for running the notebooks.
+The *samples* directory contains *.wav* audio files needed for running the notebooks.
