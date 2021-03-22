@@ -15,6 +15,6 @@ This repository is part of the EPFL Master's course *Computers and Music* taught
 - **[DeepLearning](./DeepLearning.ipynb)**: Some examples of deep learning applications in production.
 - **[Helpers](./Helpers.ipynb)**: A notebook with helpers functions for the others notebooks, along with examples and explanations.
 
-The *requirements.txt* file contains the libraries needed for running the code.
+The *[requirements.txt](./requirements.txt)* file contains the libraries needed for running the code.
 
-The *samples* directory contains *.wav* audio files needed for running the notebooks.
+The *[samples](./samples/)* directory contains *.wav* audio files needed for running the notebooks.
