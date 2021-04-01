@@ -4,13 +4,14 @@
 
 ---
 This repository is part of the EPFL Master's course *Computers and Music* taught during the fall semester. It contains the following notebooks:
-
-- **[Synthesizer](./Synthesizer.ipynb)**: Digital, additive, FM, and wavetable syntheses, and LFO modulation.
+- **[Mp3Encoder](./Mp3Encoder/Mp3Encoder.ipynb)**: A MPEG1-layer 1 encoder, converting *.wav* into *.mp3* files.
 - **[PitchScalingAndTimeStretching](./PitchScalingAndTimeStretching.ipynb)**: Methods for independently changing the pitch and length of an audio signal.
-- **[ChannelVocoder](.ChannelVocoder.ipynb)**: A vocoder combining a carrier synthesizer with a modulator voice.
-- **[Reverb](./Reverb.ipynb)**: Artificial acoustic reverberation built from FIR and IIR filters.
+- **[Synthesizer](./Synthesizer.ipynb)**: Digital, additive, FM, and wavetable syntheses, and LFO modulation.
 - **[Equalizer](./Equalizer.ipynb)**: An audio EQ composed of 3 types of frequency filters (notch, cut, and shelf).
+
+- **[ChannelVocoder](.ChannelVocoder.ipynb)**: A vocoder combining a carrier synthesizer with a modulator voice.
 - **[Compressor](./Compressor.ipynb)**: A dynamic range compressor controlled by threshold, ratio, knee with, makeup, attack, and release.
+- **[Reverb](./Reverb.ipynb)**: Artificial acoustic reverberation built from FIR and IIR filters.
 - **[NonlinearModelling](./NonlinearModelling.ipynb)**: Methods for modelling and identifying dynamic nonlinear systems such as amplifiers.
 - **[DeepLearning](./DeepLearning.ipynb)**: Some examples of deep learning applications in production.
 - **[Helpers](./Helpers.ipynb)**: A notebook with helpers functions for the others notebooks, along with examples and explanations.
