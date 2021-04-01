@@ -140,7 +140,7 @@ def format_axis(ax, *args, **kwargs):
   if plottype == 'spectrum':
   	fs = kwargs.get('fs')
   	ax.set_xlim([-fs/2, fs/2])
-  	ticks = range(0, -fs/2, -5000) + range(5000, fs/2 + 1, 5000)
+  	ticks = np.append(range(0, -int(fs/2), -5000) , range(5000, int(fs/2 + 1), 5000))
   	ax.set_xticks(ticks)
   	ax.set_title(plottitle)
   	ax.grid(True, which='both')
@@ -149,7 +149,7 @@ def format_axis(ax, *args, **kwargs):
   elif plottype == 'positivespectrum':
   	fs = kwargs.get('fs')
   	ax.set_xlim([0, fs/2])
-  	ticks = range(0, fs/2 + 1, 5000)
+  	ticks = range(0, int(fs/2 + 1), 5000)
   	ax.set_xticks(ticks)
   	ax.set_title(plottitle)
   	ax.grid(True, which='both')
@@ -159,7 +159,7 @@ def format_axis(ax, *args, **kwargs):
   	xmin = kwargs.get('xmin', 0)
   	xmax = kwargs.get('xmax', 512)
   	ax.set_xlim(xmin - 1, xmax + 1)
-  	ticks = range(xmin, xmax + 1, (xmax - xmin) / 16)
+  	ticks = range(int(xmin), int(xmax + 1), int((xmax - xmin) / 16))
   	ax.set_xticks(ticks)
   	ax.set_title(plottitle)
   	ax.grid(True, which='both')
@@ -169,22 +169,22 @@ def format_axis(ax, *args, **kwargs):
 
 
 def hear_mapping(data, map):
-  res = np.zeros(FFT_SIZE/2 + 1)
-  for i in range(FFT_SIZE/2 + 1):
+  res = np.zeros(FFT_HALF)
+  for i in range(FFT_HALF):
     res[i] = data[map[i]]
   return res
 
 
 def mask_mapping(data, map):
-  res = np.zeros(FFT_SIZE/2 + 1)
-  for i in range(FFT_SIZE/2 + 1):
+  res = np.zeros(FFT_HALF)
+  for i in range(FFT_HALF):
     res[i] = add_db(data[map[i]])
   return res
 
 
 def gmask_mapping(data, map):
-  res = np.zeros(FFT_SIZE/2 + 1)
-  for i in range(FFT_SIZE/2 + 1):
+  res = np.zeros(FFT_HALF)
+  for i in range(FFT_HALF):
     res[i] = add_db((data[map[i]],))
   return res
 
@@ -222,5 +222,5 @@ def get_critical_bands(table):
   cbands = [0,]
   for cb in range(table.cbnum):
     cbands.append(table.cbound[cb])
-  cbands.append(FFT_SIZE/2+1)
+  cbands.append(FFT_HALF)
   return cbands

@@ -78,11 +78,11 @@ def model1(samples, params, sfindices):
   scf = table.scalefactor[sfindices]  
   subband_spl = np.zeros(N_SUBBANDS)
   for sb in range(N_SUBBANDS):
-    subband_spl[sb] = np.max(X[1 + sb * SUB_SIZE : 1 + sb * SUB_SIZE + SUB_SIZE])
+    subband_spl[sb] = np.max(X[int(1 + sb * SUB_SIZE) : int(1 + sb * SUB_SIZE + SUB_SIZE)])
     subband_spl[sb] = np.maximum(subband_spl[sb], 20 * np.log10(scf[0,sb] * 32768) - 10)
     
   peaks = []
-  for i in range(3, FFT_SIZE / 2 - 6):
+  for i in range(3, int(FFT_SIZE / 2 - 6)):
     if X[i]>=X[i+1] and X[i]>X[i-1]:
       peaks.append(i)
 
@@ -216,8 +216,8 @@ def model1(samples, params, sfindices):
   #minimum masking thresholds
   mask = np.zeros(N_SUBBANDS)
   for sb in range(N_SUBBANDS):
-    first = table.map[sb * SUB_SIZE]
-    after_last  = table.map[(sb + 1) * SUB_SIZE - 1] + 1
+    first = table.map[int(sb * SUB_SIZE)]
+    after_last  = table.map[int((sb + 1) * SUB_SIZE - 1)] + 1
     mask[sb] = np.min(masking_global[first:after_last])
 
 

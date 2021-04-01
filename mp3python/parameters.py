@@ -24,7 +24,7 @@ TONE   = 1                   # Flags used to denote tonal and noise components
 NOISE  = 2
 IGNORE = 3
 
-
+FFT_HALF = int(FFT_SIZE / 2 + 1) # Half FFT as integer
 
 
 
@@ -60,11 +60,12 @@ class Tables:
     if bitrate >= 96:
       self.hear -= 12
 
-    self.map = np.zeros(FFT_SIZE / 2 + 1, dtype='uint16')
+    np.zeros(2)
+    self.map = np.zeros(FFT_HALF, dtype='uint16')
     for i in range(self.subsize - 1):
       for j in range(self.line[i],self.line[i+1]):
         self.map[j] = i
-    for j in range(self.line[self.subsize - 1], FFT_SIZE / 2 + 1):
+    for j in range(self.line[self.subsize - 1], FFT_HALF):
       self.map[j] = self.subsize - 1
 
 

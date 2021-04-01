@@ -35,7 +35,7 @@ class WavRead:
       self.nsamples = os.path.getsize(filename) * 8 / self.nbits / self.nch
     
     self.filename = filename
-    self.fp = open(self.filename, 'r')
+    self.fp = open(self.filename, 'rb')
     
     if filename[-3:] == 'wav':
       self.read_header()
@@ -57,15 +57,15 @@ class WavRead:
     """Read header information and determine if it is a valid MP3 file with PCM audio samples."""
     
     buffer = self.fp.read(128)
-    ind = buffer.find('RIFF')
+    ind = buffer.find(b'RIFF')
     if ind == -1:
       sys.exit('Bad WAVE file.')
     ind += 4
     self.chunksize = struct.unpack('<I', buffer[ind:ind+4])[0]
-    ind = buffer.find('WAVE')
+    ind = buffer.find(b'WAVE')
     if ind == -1:
       sys.exit('Bad WAVE file.')
-    ind = buffer.find('fmt ')
+    ind = buffer.find(b'fmt ')
     if ind == -1:
       sys.exit('Bad WAVE file.')
 
@@ -89,7 +89,7 @@ class WavRead:
     self.nbits = struct.unpack('<H', buffer[ind:ind+2])[0]
     if not (self.nbits in (8,16,32)):
       sys.exit('Unsupported WAVE file, samples not int8, int16 or int32 type.')
-    ind = buffer.find('data')
+    ind = buffer.find(b'data')
     if ind == -1:
       sys.exit('Unsupported WAVE file, "data" keyword not found in file.')
     ind += 4
@@ -222,7 +222,7 @@ def bitstream_formatting(filename, params, allocation, scalefactor, sample):
         if allocation[ch][sb] != 0:
           buffer.insert(sample[ch][sb][s], allocation[ch][sb], True)
   
-  fp = file(filename, 'a+')
+  fp = open(filename, 'a+')
   buffer.data.tofile(fp)
   fp.close()
 
