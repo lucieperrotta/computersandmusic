@@ -12,6 +12,7 @@ This repository is part of the EPFL Master's course *Computers and Music* taught
 - **[ChannelVocoder](.ChannelVocoder.ipynb)**: A vocoder combining a carrier synthesizer with a modulator voice.
 - **[Compressor](./Compressor.ipynb)**: A dynamic range compressor controlled by threshold, ratio, knee with, makeup, attack, and release.
 - **[Reverb](./Reverb.ipynb)**: Artificial acoustic reverberation built from FIR and IIR filters.
+- **[Beatles](./Beatles.ipynb)**: A simple implementation of a guitar-samplifier setup featuring _the Beatles_.
 - **[NonlinearModelling](./NonlinearModelling.ipynb)**: Methods for modelling and identifying dynamic nonlinear systems such as amplifiers.
 - **[DeepLearning](./DeepLearning.ipynb)**: Some examples of deep learning applications in production.
 - **[Helpers](./Helpers.ipynb)**: A notebook with helpers functions for the others notebooks, along with examples and explanations.
