@@ -7,14 +7,13 @@ This repository is part of the EPFL Master's course *Computers and Music* taught
 - **[Mp3Encoder](./Mp3Encoder/Mp3Encoder.ipynb)**: A MPEG1-layer 1 encoder, converting *.wav* into *.mp3* files.
 - **[PitchScalingAndTimeStretching](./PitchScalingAndTimeStretching.ipynb)**: Methods for independently changing the pitch and length of an audio signal.
 - **[Synthesizer](./Synthesizer.ipynb)**: Digital, additive, FM, and wavetable syntheses, and LFO modulation.
-- **[Equalizer](./Equalizer.ipynb)**: An audio EQ composed of 3 types of frequency filters (notch, cut, and shelf).
-
+- **[Equalizer](./Equalizer.ipynb)**: An audio EQ composed of 3 types of filters (notch, cut, and shelf).
 - **[ChannelVocoder](.ChannelVocoder.ipynb)**: A vocoder combining a carrier synthesizer with a modulator voice.
-- **[Compressor](./Compressor.ipynb)**: A dynamic range compressor controlled by threshold, ratio, knee with, makeup, attack, and release.
+- **[Compressor](./Compressor.ipynb)**: A dynamic range compressor controlled by threshold, ratio, knee width, makeup, attack, and release.
 - **[Reverb](./Reverb.ipynb)**: Artificial acoustic reverberation built from FIR and IIR filters.
-- **[Beatles](./Beatles.ipynb)**: A simple implementation of a guitar-samplifier setup featuring _the Beatles_.
-- **[NonlinearModelling](./NonlinearModelling.ipynb)**: Methods for modelling and identifying dynamic nonlinear systems such as amplifiers.
-- **[DeepLearning](./DeepLearning.ipynb)**: Some examples of deep learning applications in production.
+- **[Beatles](./Beatles.ipynb)**: A simple implementation of a guitar+amplifier setup featuring _the Beatles_.
+- **[NonlinearModelling](./NonlinearModelling.ipynb)**: Methods for modelling dynamic nonlinear systems such as amplifiers.
+- **[DeepLearning](./DeepLearning.ipynb)**: Some examples of deep learning applications in music production.
 - **[Helpers](./Helpers.ipynb)**: A notebook with helpers functions for the others notebooks, along with examples and explanations.
 
 The *[requirements.txt](./requirements.txt)* file contains the libraries needed for running the code.
