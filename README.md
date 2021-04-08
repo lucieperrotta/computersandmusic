@@ -20,3 +20,4 @@ This repository is part of the EPFL Master's course *Computers and Music* taught
 The *[requirements.txt](./requirements.txt)* file contains the libraries needed for running the code.
 
 The *[samples](./samples/)* directory contains *.wav* audio files needed for running the notebooks.
+The *[pictures](./pictures/)* directory contains the pictures needed for running the notebooks.
