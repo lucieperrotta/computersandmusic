@@ -4,6 +4,7 @@
 
 ---
 This repository is part of the EPFL Master's course *Computers and Music* taught during the fall semester. It contains the following notebooks:
+- **[DAC](./DAC.ipynb)**: Simple visualizations of the building bricks of an ADC and a DAC.
 - **[OneBitMusic](./OneBitMusic.ipynb)**: Encoding music over 1bit-samples using oversampling and sigma-delta.
 - **[QuantizationNoise](./QuantizationNoise.ipynb)**: Demonstration of the Tsividis' paradox when quantizing a signal.
 - **[Mp3Encoder](./Mp3Encoder/Mp3Encoder.ipynb)**: A MPEG1-layer 1 encoder, converting *.wav* into *.mp3* files.
