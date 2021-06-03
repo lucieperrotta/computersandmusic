@@ -10,7 +10,7 @@ This repository is part of the EPFL Master's course *Computers and Music* taught
 - **[Mp3Encoder](./Mp3Encoder/Mp3Encoder.ipynb)**: A MPEG1-layer 1 encoder, converting *.wav* into *.mp3* files.
 - **[PitchScalingAndTimeStretching](./PitchScalingAndTimeStretching.ipynb)**: Methods for independently changing the pitch and length of an audio signal.
 - **[ChannelVocoder](.ChannelVocoder.ipynb)**: A vocoder combining a carrier synthesizer with a modulator voice.
--**[PhysicalModelling](./PhysicalModelling.ipynb)**: Physical modelling implementations of different instruments such as strings or percussions.
+- **[PhysicalModelling](./PhysicalModelling.ipynb)**: Physical modelling implementations of different instruments such as strings or percussions.
 - **[Synthesizer](./Synthesizer.ipynb)**: Digital, additive, FM, and wavetable syntheses, and LFO modulation.
 - **[Equalizer](./Equalizer.ipynb)**: An audio EQ composed of 3 types of frequency filters (notch, cut, and shelf).
 - **[Compressor](./Compressor.ipynb)**: A dynamic range compressor controlled by threshold, ratio, knee with, makeup, attack, and release.
