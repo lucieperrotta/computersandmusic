@@ -9,7 +9,7 @@ This repository is part of the EPFL Master's course *Computers and Music* taught
 - **[QuantizationNoise](./QuantizationNoise.ipynb)**: Demonstration of the Tsividis' paradox when quantizing a signal.
 - **[Mp3Encoder](./Mp3Encoder/Mp3Encoder.ipynb)**: A MPEG1-layer 1 encoder, converting *.wav* into *.mp3* files.
 - **[PitchScalingAndTimeStretching](./PitchScalingAndTimeStretching.ipynb)**: Methods for independently changing the pitch and length of an audio signal.
-- **[ChannelVocoder](.ChannelVocoder.ipynb)**: A vocoder combining a carrier synthesizer with a modulator voice.
+- **[ChannelVocoder](./ChannelVocoder.ipynb)**: A vocoder combining a carrier synthesizer with a modulator voice.
 - **[PhysicalModelling](./PhysicalModelling.ipynb)**: Physical modelling implementations of different instruments such as strings or percussions.
 - **[Synthesizer](./Synthesizer.ipynb)**: Digital, additive, FM, and wavetable syntheses, and LFO modulation.
 - **[Equalizer](./Equalizer.ipynb)**: An audio EQ composed of 3 types of frequency filters (notch, cut, and shelf).
